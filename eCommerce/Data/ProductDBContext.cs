@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using eCommerce.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace eCommerce.Data;
 
@@ -9,4 +10,4 @@ public class ProductDBContext : DbContext
     }
     // Entities to be tracked by DbContext
     public DbSet<Product> Products { get; set; }
-    }
+}
