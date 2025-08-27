@@ -35,8 +35,9 @@ namespace eCommerce.Controllers
                 _context.Products.Add(product);     // Add the new product to the DbSet
                 await _context.SaveChangesAsync(); // Save changes to the database
 
-                return RedirectToAction(nameof(Index));
+                TempData["SuccessMessage"] = $"{product.Title} was created successfully!";
 
+                return RedirectToAction(nameof(Index));
             }
 
             return View(product);

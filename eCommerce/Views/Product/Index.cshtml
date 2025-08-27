@@ -7,6 +7,14 @@
 
 <a asp-action="Create" class="btn btn-primary mb-3">Add New Product</a>	
 
+@if (TempData["SuccessMessage"] != null)
+{
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+		@TempData["SuccessMessage"]
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-lable="close"></button>
+	</div>
+}
+
 @if (Model.Count() == 0)
 {
 	<p>No products found.</p>
